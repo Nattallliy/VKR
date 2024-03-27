@@ -1,0 +1,263 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.header{
+    padding-top: 20px;
+    background-color: white;
+}
+
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+
+}
+
+.logo{
+    position: relative;
+    padding: 0 12px 3px 0;
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.logo::after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+/Навигация/
+
+
+
+ul.nav_list {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+    font-weight: 500;
+    font-size: 50px;
+}
+ul.nav_list li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+
+}
+
+.nav-link{
+    color: #2A2B2B;
+    mix-blend-mode: multiply;
+    text-transform: uppercase;
+    letter-spacing: 0.15px;
+    transition: opacity 0.2s ease-in;
+
+}
+
+.nav-link.active{
+    color: #606060;
+}
+
+
+.nav-link:active{
+
+    position: relative;
+    top: 1px;
+}
+
+.nav-link:hover{
+    opacity: 0.8;
+}
+
+/*//////////////////////////////////////////*/
+
+.containerPrice_blok{
+    text-align: center;
+    background-color: #abe7d2;
+
+}
+
+.containerPrice_text{
+    font-weight: 600;
+    font-size: 44px;
+    color: #2A2B2B;
+    padding-top: 59px;
+    margin: 100px 50px;
+}
+
+.containerPrice_B{
+    display: flex;
+    margin-left: 150px;
+
+
+}
+
+
+.containerPrice_B1{
+    content: "";
+    width: 400px;
+    height: 800px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5%;
+    margin-right: 30px;
+    margin-bottom: 100px;
+}
+
+.containerPrice_B2{
+    content: "";
+    width: 400px;
+    height: 800px;
+
+    display: inline-block;
+    background-color: white;
+    border-radius: 5%;
+    margin-right: 30px;
+
+}
+
+.containerPrice_B3{
+    content: "";
+    width: 400px;
+    height: 800px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5%;
+
+
+}
+
+.text_z{
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #2A2B2B;
+}
+
+.text_z_1{
+    width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2A2B2B;
+}
+
+.text-content{
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 15px;
+    color: #2A2B2B;
+
+}
+
+.text-price{
+    width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 15px;
+    color: #6BE6C8;
+}
+
+.text-content_1{
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 15px;
+    color: #2A2B2B;
+
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+
+
+    width: 150px;
+    height: 50px;
+    margin: 105px auto;
+
+    border-radius: 10px;
+    background-color: #6BE6C8;
+    color: #2A2B2B;
+    letter-spacing: 0.15px;
+    font-size: 20px;
+    font-weight: 500;
+
+    transition: opacity 0.2s ease-in;
+
+}
+
+
+.button:hover{
+    opacity: 0.8;
+}
+
+.button:active{
+    position: relative;
+    top: 1px;
+}
+
+.text-blok_1_1{
+    margin: 10px 20px;
+}
+
+.button_1{
+    display: flex;
+    justify-content: space-between;
+
+
+    width: 150px;
+    height: 50px;
+    margin: 10px auto;
+
+    border-radius: 10px;
+    background-color: #6BE6C8;
+    color: #2A2B2B;
+    letter-spacing: 0.15px;
+    font-size: 20px;
+    font-weight: 500;
+
+    transition: opacity 0.2s ease-in;
+}
+
+
+.button_1:hover{
+    opacity: 0.8;
+}
+
+.button_1:active{
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+
