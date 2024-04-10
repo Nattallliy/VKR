@@ -5,7 +5,7 @@
 <head>
     <link rel="icon" href="{% static 'images/icon.png'%}">
     <meta charset="UTF-8">
-    <title>SMI;)LE</title>
+    <title>{{title}}</title>
     <link href="/css/bootstrap.min.css" rel="style">
     <link rel="stylesheet" href="{% static 'css/reset.css'%}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/prices.css'%}" type="text/css">
@@ -18,11 +18,11 @@
                 <a href="#!" class="logo"> Sm;)le </a>
                 <nav class="nav">
                     <ul class="nav_list">
-                        <li class="nav-item"><a href="#index.html" class="nav-link ">Главная</a> </li>
-                        <li class="nav-item"><a href="#classes.html" class="nav-link">Классы</a> </li>
-                        <li class="nav-item"><a href="#!" class="nav-link active" >Цены</a> </li>
-                        <li class="nav-item"><a href="#!" class="nav-link">О нас</a> </li>
-                        <li class="nav-item"><a href="#!" class="nav-link">Контакты</a> </li>
+                         <li class="nav-item"><a href="/index/" class="nav-link ">Главная</a> </li>
+                        <li class="nav-item"><a href="/classes/" class="nav-link">Классы</a> </li>
+                        <li class="nav-item"><a href="/prices/" class="nav-link active">Цены</a> </li>
+                        <li class="nav-item"><a href="/o_nas/" class="nav-link">О нас</a> </li>
+                        <li class="nav-item"><a href="/kontact/" class="nav-link">Контакты</a> </li>
                     </ul>
                 </nav>
             </div>
@@ -35,17 +35,49 @@
             <div class="containerPrice_B">
                 <div class="containerPrice_B1">
                     <h1 class="text_z">Групповые тренировки</h1>
-                    <p class="text-content">Разовая тренировка — <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                    <p class="text_z_1">Разовая тренировка — <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
                     <p class="text_z_1">Абонементы на месяц:</p>
-                    <p class="text-content">5 тренировок —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <p class="text-content">8 тренировок  —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <p class="text-content">12 тренировок —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <p class="text-content">Безлимитный —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                    <p class="text-content_1">5 тренировок —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                    <p class="text-content_1">8 тренировок  —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                    <p class="text-content_1">12 тренировок —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                    <p class="text-content_1">Безлимитный —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
                     <p class="text_z_1">Длительные абонементы*:</p>
-                    <p class="text-content">30 тренировок на 3 месяца —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <p class="text-content">(+10 дней заморозки и 3 гостевых) </p>
-                    <p class="text-content">*количество длительных абонементов может быть ограниченно </p>
-                    <a class="button" href="#!"><p class="text-blok_1_1" >Подробнее</p></a>
+                    <p class="text-content_1">30 тренировок на 3 месяца —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                    <p class="text-content_1">(+10 дней заморозки и 3 гостевых) </p>
+                    <p class="text-content_1_1">*количество длительных абонементов может быть ограниченно </p>
+                    <a class="js-open-modal" href="#" data-modal="1">Подробнее</a>
+
+                            <!-- Несколько модальных окон -->
+
+                            <div class="modal" data-modal="1">
+
+                               <!--   Svg иконка для закрытия окна  -->
+                                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                                <p class="modal__title">Оставьте свои контакты</p>
+                                <p class="modal__title_1">Наш администратор свяжется с вами в ближайшее время</p>
+
+                                <form class="contact_form" method="post" action="#!">
+                                <p class="contact_field_1" data-id="name" data-type="input">
+                                    <label for="contact_name_1" class="contact_form_label">Имя</label>
+                                    <input type="text" id="contact_name_1" class="input" value name="contact_name_1" data-required_mark="required" data-filed_type="input" data-original_id="name" placeholder="Как вас зовут?" wfd-id="id1">
+                                </p>
+                                <p class="contact_field_2" data-id="email" data-type="input">
+                                    <label for="contact_email_2" class="contact_form_label">Телефон</label>
+                                    <input type="text" id="contact_email_2" class="input" value name="contact_email_2" data-required_mark="required" data-filed_type="input" data-original_id="email" placeholder="Ваш номер телефона" wfd-id="id1_2">
+
+                                <input type="hidden" value="contact_proccess" name="contactform_submit_0" wfd-id="id2">
+                                <div class="contact_bottom_container">
+                                    <button type="submit" name="builder_submit_button" class="contact_submit_button">Узнать подробности</button>
+                                </div>
+                                <input type="hidden" id="_wpnonce-contact-form-submitted-0" name="_wpnonce-contact-form-submitted-0" value="311eca000c" wfd-id="id3">
+                                <input type="hidden" name="_wp_http_referer" value="/wordpress/divi/fitnessgym/" wfd-id="id4">
+
+                            </form>
+                            </div>
+
+                            <!-- Подложка под модальным окном -->
+                            <div class="overlay js-overlay-modal"></div>
 
                 </div>
                 <div class="containerPrice_B2">
@@ -62,7 +94,39 @@
                     <p class="text-content_1">Разовая —  <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
                     <p class="text-content_1">5 тренировок на 30 дней — <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
                     <p class="text-content_1">10 тренировок на 60 дней — <span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <a class="button_1" href="#!"><p class="text-blok_1_1" >Подробнее</p></a>
+                    <a class="js-open-modal" href="#" data-modal="2">Подробнее</a>
+
+                            <!-- Несколько модальных окон -->
+
+                            <div class="modal" data-modal="2">
+
+                               <!--   Svg иконка для закрытия окна  -->
+                                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                                <p class="modal__title">Оставьте свои контакты</p>
+                                <p class="modal__title_1">Наш администратор свяжется с вами в ближайшее время</p>
+
+                                <form class="contact_form" method="post" action="#!">
+                                <p class="contact_field_1" data-id="name" data-type="input">
+                                    <label for="contact_name_1" class="contact_form_label">Имя</label>
+                                    <input type="text" id="contact_name_1" class="input" value name="contact_name_1" data-required_mark="required" data-filed_type="input" data-original_id="name" placeholder="Как вас зовут?" wfd-id="id1">
+                                </p>
+                                <p class="contact_field_2" data-id="email" data-type="input">
+                                    <label for="contact_email_2" class="contact_form_label">Телефон</label>
+                                    <input type="text" id="contact_email_2" class="input" value name="contact_email_2" data-required_mark="required" data-filed_type="input" data-original_id="email" placeholder="Ваш номер телефона" wfd-id="id1_2">
+
+                                <input type="hidden" value="contact_proccess" name="contactform_submit_0" wfd-id="id2">
+                                <div class="contact_bottom_container">
+                                    <button type="submit" name="builder_submit_button" class="contact_submit_button">Узнать подробности</button>
+                                </div>
+                                <input type="hidden" id="_wpnonce-contact-form-submitted-0" name="_wpnonce-contact-form-submitted-0" value="311eca000c" wfd-id="id3">
+                                <input type="hidden" name="_wp_http_referer" value="/wordpress/divi/fitnessgym/" wfd-id="id4">
+
+                            </form>
+                            </div>
+
+                            <!-- Подложка под модальным окном -->
+                            <div class="overlay js-overlay-modal"></div>
 
 
                 </div>
@@ -77,13 +141,118 @@
                     <p class="text-content_1">*подбирается по вашему типу кожи</p>
                     <p class="text-content_1">Карбокситерапия —<span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
                     <p class="text-content_1">«Сияние кожи» —<span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <p class="text-content_1">Уходовая маска по типу кожи —<span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
-                    <a class="button" href="#!"><p class="text-blok_1_1" >Подробнее</p></a>
+                    <p class="text-content_1__1">Уходовая маска по типу кожи —<span style="color: #6BE6C8"><b><big>1000₽</big></b></span></p>
+                     <a class="js-open-modal" href="#" data-modal="3">Подробнее</a>
+
+                            <!-- Несколько модальных окон -->
+
+                            <div class="modal" data-modal="3">
+
+                               <!--   Svg иконка для закрытия окна  -->
+                                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                                <p class="modal__title">Оставьте свои контакты</p>
+                                <p class="modal__title_1">Наш администратор свяжется с вами в ближайшее время</p>
+
+                                <form class="contact_form" method="post" action="#!">
+                                <p class="contact_field_1" data-id="name" data-type="input">
+                                    <label for="contact_name_1" class="contact_form_label">Имя</label>
+                                    <input type="text" id="contact_name_1" class="input" value name="contact_name_1" data-required_mark="required" data-filed_type="input" data-original_id="name" placeholder="Как вас зовут?" wfd-id="id1">
+                                </p>
+                                <p class="contact_field_2" data-id="email" data-type="input">
+                                    <label for="contact_email_2" class="contact_form_label">Телефон</label>
+                                    <input type="text" id="contact_email_2" class="input" value name="contact_email_2" data-required_mark="required" data-filed_type="input" data-original_id="email" placeholder="Ваш номер телефона" wfd-id="id1_2">
+
+                                <input type="hidden" value="contact_proccess" name="contactform_submit_0" wfd-id="id2">
+                                <div class="contact_bottom_container">
+                                    <button type="submit" name="builder_submit_button" class="contact_submit_button">Узнать подробности</button>
+                                </div>
+                                <input type="hidden" id="_wpnonce-contact-form-submitted-0" name="_wpnonce-contact-form-submitted-0" value="311eca000c" wfd-id="id3">
+                                <input type="hidden" name="_wp_http_referer" value="/wordpress/divi/fitnessgym/" wfd-id="id4">
+
+                            </form>
+                            </div>
+
+                            <!-- Подложка под модальным окном -->
+                            <div class="overlay js-overlay-modal"></div>
 
                 </div>
             </div>
         </div>
     </div>
 
+
+<script>
+!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+   /* Записываем в переменные массив элементов-кнопок и подложку.
+      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+   var modalButtons = document.querySelectorAll('.js-open-modal'),
+       overlay      = document.querySelector('.js-overlay-modal'),
+       closeButtons = document.querySelectorAll('.js-modal-close');
+
+
+   /* Перебираем массив кнопок */
+   modalButtons.forEach(function(item){
+
+      /* Назначаем каждой кнопке обработчик клика */
+      item.addEventListener('click', function(e) {
+
+         /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+            Нужно подстраховаться. */
+         e.preventDefault();
+
+         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+            и будем искать модальное окно с таким же атрибутом. */
+         var modalId = this.getAttribute('data-modal'),
+             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+
+         /* После того как нашли нужное модальное окно, добавим классы
+            подложке и окну чтобы показать их. */
+         modalElem.classList.add('active');
+         overlay.classList.add('active');
+      }); // end click
+
+   }); // end foreach
+
+
+   closeButtons.forEach(function(item){
+
+      item.addEventListener('click', function(e) {
+         var parentModal = this.closest('.modal');
+
+         parentModal.classList.remove('active');
+         overlay.classList.remove('active');
+      });
+
+   }); // end foreach
+
+
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        };
+    }, false);
+
+
+    overlay.addEventListener('click', function() {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+    });
+
+
+
+
+}); // end ready
+</script>
 </body>
 </html>

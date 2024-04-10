@@ -92,6 +92,71 @@ ul.nav_list li {
     opacity: 0.8;
 }
 
+/*////////////////////////////////////*/
+.text-content{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-top: 60px;
+}
+
+.whatwe{
+
+    margin: 100px auto;
+    background-color: #bbefe3;
+}
+.whatwe_content{
+    display: flex;
+}
+
+.whatwe_content_foto{
+    width: 600px;
+    height: 500px;
+    margin: auto 70px 0 100px;
+}
+
+.whatwe_content_text_text{
+    width: 600px;
+    height: 200px;
+    transform: translateY(60px);
+}
+
+.whatwe_content_text_z{
+    padding-bottom: 30px;
+
+    font-size: 30px;
+    font-weight: 600;
+    color: #2A2B2B;
+}
+
+.whatwe_content_text_c{
+    font-size: 20px;
+    color: #2A2B2B;
+}
+
+.whatwe_content_1{
+    display: flex;
+    margin: auto 70px 0 100px;
+}
+
+.whatwe_content_text_z_1{
+    padding-bottom: 30px;
+
+    font-size: 25px;
+    font-weight: 600;
+    color: #2A2B2B;
+
+}
+
+.contact_cont{
+    display: flex;
+}
+
+.contact_text{
+    margin: 100px auto;
+}
+
 /*//////////////////////////////////////*/
 .containerOnas_blok{
     background-color: #bbefe3;
@@ -100,7 +165,7 @@ ul.nav_list li {
     text-align: center;
     font-weight: 600;
     font-size: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     padding-top: 60px;
 }
 
@@ -284,62 +349,4 @@ to {opacity: 1}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
 .prev, .next,.text {font-size: 11px}
-}
-
-/*////////////////////////////////////*/
-
-.whatwe{
-
-    margin: 100px auto;
-    background-color: #bbefe3;
-}
-.whatwe_content{
-    display: flex;
-}
-
-.whatwe_content_foto{
-    width: 600px;
-    height: 500px;
-    margin: auto 70px 0 100px;
-}
-
-.whatwe_content_text_text{
-    width: 600px;
-    height: 200px;
-    transform: translateY(60px);
-}
-
-.whatwe_content_text_z{
-    padding-bottom: 30px;
-
-    font-size: 30px;
-    font-weight: 600;
-    color: #2A2B2B;
-}
-
-.whatwe_content_text_c{
-    font-size: 20px;
-    color: #2A2B2B;
-}
-
-.whatwe_content_1{
-    display: flex;
-    margin: auto 70px 0 100px;
-}
-
-.whatwe_content_text_z_1{
-    padding-bottom: 30px;
-
-    font-size: 25px;
-    font-weight: 600;
-    color: #2A2B2B;
-
-}
-
-.contact_cont{
-    display: flex;
-}
-
-.contact_text{
-    margin: 100px auto;
 }

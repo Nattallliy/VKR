@@ -1,3 +1,6 @@
-from django.db import models
+from tkinter import Image
+
+
 
 # Create your models here.
+

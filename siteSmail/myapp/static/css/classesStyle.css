@@ -128,7 +128,7 @@ ul.nav_list li {
 
 
 .clasContainer_header{
-    height: 700px;
+    height: 2400px;
     margin-left: 100px;
 }
 
@@ -318,8 +318,8 @@ ul.nav_list li {
 
 .js-open-modal {
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    align-items: center;
 
     width: 150px;
     height: 50px;
@@ -333,6 +333,8 @@ ul.nav_list li {
     font-weight: 500;
 
     transition: opacity 0.2s ease-in;
+
+
 }
 
 
@@ -350,5 +352,13 @@ ul.nav_list li {
 
     font-size: 20px;
     text-align: center;
+}
+
+.text-content{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-top: 60px;
 }
 

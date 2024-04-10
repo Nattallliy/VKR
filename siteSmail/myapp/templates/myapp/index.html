@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="ru-RU" class="js">
 <head>
     <link rel="icon" href="{% static 'images/icon.png'%}">
     <meta charset="UTF-8">
-    <title>SMI;)LE</title>
+    <title>{{title}}</title>
     <link href="/css/bootstrap.min.css" rel="style">
     <link rel="stylesheet" href="{% static 'css/reset.css'%}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
@@ -17,11 +18,12 @@
                 <a href="#!" class="logo"> Sm;)le </a>
                 <nav class="nav">
                     <ul class="nav_list">
-                        <li class="nav-item"><a href="#index.html" class="nav-link active">Главная</a> </li>
-                        <li class="nav-item"><a href="#classes.html" class="nav-link">Классы</a> </li>
-                        <li class="nav-item"><a href="#!" class="nav-link">Цены</a> </li>
-                        <li class="nav-item"><a href="#!" class="nav-link">О нас</a> </li>
-                        <li class="nav-item"><a href="#!" class="nav-link">Контакты</a> </li>
+                        <li class="nav-item"><a href=/index/" class="nav-link active">Главная</a> </li>
+                        <li class="nav-item"><a href="/classes/" class="nav-link">Классы</a> </li>
+                        <li class="nav-item"><a href="/prices/" class="nav-link">Цены</a> </li>
+                        <li class="nav-item"><a href="/o_nas/" class="nav-link">О нас</a> </li>
+                        <li class="nav-item"><a href="/kontact/" class="nav-link">Контакты</a> </li>
+
                     </ul>
                 </nav>
             </div>
@@ -43,6 +45,7 @@
 
                 </div>
     </header>
+
 
     <div class="containerHTML">
         <div class="container1">
@@ -101,8 +104,8 @@
                 <h1>О Т З Ы В Ы</h1>
             </div>
         </div>
-
     </div>
+
 
     <div class="footer" id="regform" style="background-image: url('{% static "images/indeximg/f.png"%}')">
         <div class="container33">
@@ -164,8 +167,6 @@
             </div>
         </div>
     </div>
-
-
 
 </body>
 </html>
