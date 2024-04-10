@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru-RU" class="js">
+<head>
+    <link rel="icon" href="{% static 'images/icon.png'%}">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link href="/css/bootstrap.min.css" rel="style">
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/kontact.css'%}" type="text/css">
+<body>
+    <header class="header">
+        <div class="container">
+            <!--Блок с навигацией-->
+            <div class=" header-nav">
+                <a href="#!" class="logo"> Sm;)le </a>
+                <nav class="nav">
+                    <ul class="nav_list">
+                         <li class="nav-item"><a href="/index/" class="nav-link ">Главная</a> </li>
+                        <li class="nav-item"><a href="/classes/" class="nav-link">Классы</a> </li>
+                        <li class="nav-item"><a href="/prices/" class="nav-link ">Цены</a> </li>
+                        <li class="nav-item"><a href="/o_nas/" class="nav-link">О нас</a> </li>
+                        <li class="nav-item"><a href="/kontact/" class="nav-link active">Контакты</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+     <div class="containerOnas">
+        <div class="containerOnas_blok">
+
+            <div class="contact" id="contakt">
+                <p class="text-content">Контакты</p>
+                <div class="contact_cont">
+
+                    <div class="scr">
+                        <script type="text/javascript" charset="utf-8"
+                        async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab64e4c82abfc60721234de51d1de934b168f47602cc356cbe4cdf697ea2cd3cd&amp;width=695&amp;height=700&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+
+                     <div class="contact_text">
+
+                        <p class="whatwe_content_text_z">Где находится студия Sm;)le</p>
+                        <p class="whatwe_content_text_z_1">г.Череповец</p>
+                        <p class="whatwe_content_text_c">Ленина, 39а, 2 этаж <br>Район Индустриальный <br> телефон: +7 (8202) 32-42-40<br>
+                             +7 (911) 518-05-05</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+</body>
+</html>
