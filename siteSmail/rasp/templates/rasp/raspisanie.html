@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru-RU" class="js">
+<head>
+    <link rel="icon" href="{% static 'images/icon.png'%}">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link href="/css/bootstrap.min.css" rel="style">
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/raspisanie.css'%}" type="text/css">
+</head>
+<body >
+    <header class="header">
+        <div class="container">
+            <!--Блок с навигацией-->
+            <div class=" header-nav">
+                <a href="#!" class="logo"> Sm;)le </a>
+                <nav class="nav">
+                    <ul class="nav_list">
+                        <li class="nav-item"><a href="/index/" class="nav-link ">Главная</a> </li>
+                        <li class="nav-item"><a href="/classes/" class="nav-link ">Классы</a> </li>
+                        <li class="nav-item"><a href="/prices/" class="nav-link">Цены</a> </li>
+                        <li class="nav-item"><a href="/o_nas/" class="nav-link">О нас</a> </li>
+                        <li class="nav-item"><a href="/raspisanie/" class="nav-link  active">Расписание</a> </li>
+                        <li class="nav-item"><a href="/kontact/" class="nav-link">Контакты</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    {% for r in queryset %}
+      {{r.title}},{{r.mon}}}
+      <br>
+    {% endfor %}
+</body>
+</html>
