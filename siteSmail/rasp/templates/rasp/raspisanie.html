@@ -30,9 +30,13 @@
         </div>
     </header>
 
-    {% for r in queryset %}
-      {{r.title}},{{r.mon}}}
-      <br>
-    {% endfor %}
+
+ {% for i in peopless %}
+                    <tr class='success'>
+                        <td>{{ i.id }}</td>
+                        <td>{{ i.FIO }}</td>
+                        <td>{{ i.birthday }}</td>
+                    </tr>
+                        {% endfor %}
 </body>
 </html>

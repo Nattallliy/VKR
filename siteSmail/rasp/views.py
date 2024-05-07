@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from .models import Articles
+from .models import Peoples
 
 
 
 def raspisanie(request):
-   # rasp = Articles.objects.all()
-    return render(request, 'rasp/raspisanie.html', {'title': 'Расписание'})#, {'rasp': rasp})
-
+    peopless = Peoples.objects.all()
+    return render(request, 'rasp/raspisanie.html', {'peopless': peopless})
