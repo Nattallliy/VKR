@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="ru-RU" class="js">
+<html lang="ru-RU" class="js" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="icon" href="{% static 'images/icon.png'%}">
     <meta charset="UTF-8">
@@ -30,13 +30,13 @@
         </div>
     </header>
 
+    <div class="Ssuccess">
+        {% for i in peopless %}
+            <p>{{ i.week }}</p>
+            <p>{{ i.time }}</p>
+            <p>{{ i.train }}</p>
 
- {% for i in peopless %}
-                    <tr class='success'>
-                        <td>{{ i.id }}</td>
-                        <td>{{ i.FIO }}</td>
-                        <td>{{ i.birthday }}</td>
-                    </tr>
-                        {% endfor %}
+        {% endfor %}
+    </div>
 </body>
 </html>

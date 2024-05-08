@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Peoples
+from .models import Rasp
 
 
 
 def raspisanie(request):
-    peopless = Peoples.objects.all()
+    peopless = Rasp.objects.all()
     return render(request, 'rasp/raspisanie.html', {'peopless': peopless})
