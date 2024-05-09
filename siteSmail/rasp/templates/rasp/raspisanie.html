@@ -9,6 +9,8 @@
     <link href="/css/bootstrap.min.css" rel="style">
     <link rel="stylesheet" href="{% static 'css/reset.css'%}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/raspisanie.css'%}" type="text/css">
+
+
 </head>
 <body >
     <header class="header">
@@ -30,13 +32,250 @@
         </div>
     </header>
 
-    <div class="Ssuccess">
+   <!-- <div class="Ssuccess">
         {% for i in peopless %}
             <p>{{ i.week }}</p>
             <p>{{ i.time }}</p>
             <p>{{ i.train }}</p>
 
         {% endfor %}
+    </div>-->
+
+  <div class="calendar-container">
+        <header class="calendar-header">
+            <p class="calendar-current-date"></p>
+            <div class="calendar-navigation">
+                <span id="calendar-prev"
+                      class="material-symbols-rounded">
+                    <
+                </span>
+                <span id="calendar-next"
+                      class="material-symbols-rounded">
+                    >
+                </span>
+            </div>
+        </header>
+
+        <div class="calendar-body">
+            <ul class="calendar-weekdays">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="calendar-dates"></ul>
+        </div>
     </div>
+     <button onclick='myFunction()'>ПН</button>
+
+
+<script>
+document.getElementById('myButton').onclick = myFunction;
+function myFunction() {
+  alert(
+      '        {% for i in peopless %}\n' +
+      '            {{ i.time }}\n' +
+      '            {{ i.train }}\n' +
+      '            {{ i.title }}\n' +
+      '            {{ i.FIO }}\n' +
+      '\n' +
+      '        {% endfor %}\n'
+      );
+}
+</script>
+
+<script>
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
+
+const day = document.querySelector(".calendar-dates");
+
+const currdate = document
+    .querySelector(".calendar-current-date");
+
+const prenexIcons = document
+    .querySelectorAll(".calendar-navigation span");
+
+// Array of month names
+const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
+// Function to generate the calendar
+const manipulate = () => {
+
+    // Get the first day of the month
+    let dayone = new Date(year, month, 1).getDay();
+
+    // Get the last date of the month
+    let lastdate = new Date(year, month + 1, 0).getDate();
+
+    // Get the day of the last date of the month
+    let dayend = new Date(year, month, lastdate).getDay();
+
+    // Get the last date of the previous month
+    let monthlastdate = new Date(year, month, 0).getDate();
+
+    // Variable to store the generated calendar HTML
+    let lit = "";
+
+    // Loop to add the last dates of the previous month
+    for (let i = dayone; i > 0; i--) {
+        lit +=
+            `<li class="inactive">${monthlastdate - i + 1}</li>`;
+    }
+
+    // Loop to add the dates of the current month
+    for (let i = 1; i <= lastdate; i++) {
+
+        // Check if the current date is today
+        let isToday = i === date.getDate()
+            && month === new Date().getMonth()
+            && year === new Date().getFullYear()
+            ? "active"
+            : "";
+        lit += `<li class="${isToday}">${i}</li>`;
+    }
+
+    // Loop to add the first dates of the next month
+    for (let i = dayend; i < 6; i++) {
+        lit += `<li class="inactive">${i - dayend + 1}</li>`
+    }
+
+    // Update the text of the current date element
+    // with the formatted current month and year
+    currdate.innerText = `${months[month]} ${year}`;
+
+    // update the HTML of the dates element
+    // with the generated calendar
+    day.innerHTML = lit;
+}
+
+manipulate();
+
+// Attach a click event listener to each icon
+prenexIcons.forEach(icon => {
+
+    // When an icon is clicked
+    icon.addEventListener("click", () => {
+
+        // Check if the icon is "calendar-prev"
+        // or "calendar-next"
+        month = icon.id === "calendar-prev" ? month - 1 : month + 1;
+
+        // Check if the month is out of range
+        if (month < 0 || month > 11) {
+
+            // Set the date to the first day of the
+            // month with the new year
+            date = new Date(year, month, new Date().getDate());
+
+            // Set the year to the new year
+            year = date.getFullYear();
+
+            // Set the month to the new month
+            month = date.getMonth();
+        }
+
+        else {
+
+            // Set the date to the current date
+            date = new Date();
+        }
+
+        // Call the manipulate function to
+        // update the calendar display
+        manipulate();
+    });
+});
+</script>
+
+<script>
+!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+   /* Записываем в переменные массив элементов-кнопок и подложку.
+      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+   var modalButtons = document.querySelectorAll('.js-open-modal'),
+       overlay      = document.querySelector('.js-overlay-modal'),
+       closeButtons = document.querySelectorAll('.js-modal-close');
+
+
+   /* Перебираем массив кнопок */
+   modalButtons.forEach(function(item){
+
+      /* Назначаем каждой кнопке обработчик клика */
+      item.addEventListener('click', function(e) {
+
+         /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+            Нужно подстраховаться. */
+         e.preventDefault();
+
+         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+            и будем искать модальное окно с таким же атрибутом. */
+         var modalId = this.getAttribute('data-modal'),
+             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+
+         /* После того как нашли нужное модальное окно, добавим классы
+            подложке и окну чтобы показать их. */
+         modalElem.classList.add('active');
+         overlay.classList.add('active');
+      }); // end click
+
+   }); // end foreach
+
+
+   closeButtons.forEach(function(item){
+
+      item.addEventListener('click', function(e) {
+         var parentModal = this.closest('.modal');
+
+         parentModal.classList.remove('active');
+         overlay.classList.remove('active');
+      });
+
+   }); // end foreach
+
+
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        };
+    }, false);
+
+
+    overlay.addEventListener('click', function() {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+    });
+
+
+
+
+}); // end ready
+</script>
 </body>
 </html>

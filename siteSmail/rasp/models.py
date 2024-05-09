@@ -1,10 +1,6 @@
 from django.db import models
 
 
-
-
-
-
 class Peoples(models.Model):
     FIO = models.CharField(max_length=128)
 
@@ -51,18 +47,6 @@ class Time(models.Model):
 
 class Week(models.Model):
     week = models.CharField(max_length=128)
-
-    class Meta:
-        verbose_name = 'День недели'
-        verbose_name_plural = 'Дни недели'
-
-    def __str__(self):
-        return self.week
-
-
-class Rasp(models.Model):
-    month = models.ForeignKey('Month', on_delete=models.CASCADE)
-    week = models.ForeignKey('Week', on_delete=models.CASCADE, null=True, blank=True)
     time = models.ForeignKey('Time', on_delete=models.CASCADE, null=True)
     train = models.ForeignKey('Class', on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=128, null=True)
@@ -70,16 +54,10 @@ class Rasp(models.Model):
 
 
     class Meta:
-        verbose_name = 'Расписание'
-        verbose_name_plural = 'Расписание'
+        verbose_name = 'День недели'
+        verbose_name_plural = 'Дни недели'
 
-    #def __str__(self):
-      #  return self.week
-
-
-
-
-
-
+    def __str__(self):
+        return self.week
 
 

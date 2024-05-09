@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Rasp
+from .models import Week
 
 
 
 def raspisanie(request):
-    peopless = Rasp.objects.all()
+    peopless = Week.objects.order_by('time')
     return render(request, 'rasp/raspisanie.html', {'peopless': peopless})
