@@ -22,20 +22,10 @@ class Class(models.Model):
     def __str__(self):
         return self.train
 
-class Month(models.Model):
-    month = models.CharField(max_length=128)
-
-    class Meta:
-        verbose_name = 'Месяц'
-        verbose_name_plural = 'Месяцы'
-
-    def __str__(self):
-        return self.month
-
-
 
 class Time(models.Model):
     time = models.CharField(max_length=128)
+
 
     class Meta:
         verbose_name = 'Время'
@@ -46,18 +36,24 @@ class Time(models.Model):
 
 
 class Week(models.Model):
-    week = models.CharField(max_length=128)
+    week = models.CharField(max_length=128,  null=True)
     time = models.ForeignKey('Time', on_delete=models.CASCADE, null=True)
     train = models.ForeignKey('Class', on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=128, null=True)
     FIO = models.ForeignKey('Peoples', on_delete=models.CASCADE, null=True)
+    date = models.DateField('дата')
+
+
 
 
     class Meta:
         verbose_name = 'День недели'
         verbose_name_plural = 'Дни недели'
 
+
     def __str__(self):
-        return self.week
+        return f'{self.week} {self.time}'
+
+
 
 

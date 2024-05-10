@@ -69,20 +69,34 @@
             <ul class="calendar-dates"></ul>
         </div>
     </div>
-     <button onclick='myFunction()'>ПН</button>
+
+    <a href="{% url 'week_filter' pk=1 %}"><button onclick='myFunction()'>ПН</button></a>
+    <a href="{% url 'week_filter' pk=2 %}"><button onclick='myFunction()'>ВТ</button></a>
+    <a href="{% url 'week_filter' pk=3 %}"><button onclick='myFunction()'>СР</button></a>
+    <a href="{% url 'week_filter' pk=4 %}"><button onclick='myFunction()'>ЧТ</button></a>
+    <a href="{% url 'week_filter' pk=5 %}"><button onclick='myFunction()'>ПТ</button></a>
+    <a href="{% url 'week_filter' pk=6 %}"><button onclick='myFunction()'>СБ</button></a>
+    <a href="{% url 'week_filter' pk=7 %}"><button onclick='myFunction()'>ВСК</button></a>
+
+
 
 
 <script>
 document.getElementById('myButton').onclick = myFunction;
 function myFunction() {
   alert(
-      '        {% for i in peopless %}\n' +
+      '{% if week %}\n' +
+      '        {% for i in week %}\n' +
+
       '            {{ i.time }}\n' +
       '            {{ i.train }}\n' +
       '            {{ i.title }}\n' +
       '            {{ i.FIO }}\n' +
-      '\n' +
-      '        {% endfor %}\n'
+
+      '        {% endfor %}\n' +
+      '{% else %}\n' +
+      '        Нет записей  \n' +
+      '{% endif %}\n'
       );
 }
 </script>

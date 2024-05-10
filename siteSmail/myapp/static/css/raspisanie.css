@@ -98,7 +98,7 @@ ul.nav_list li {
 
 .calendar-container {
     margin: auto;
-    background: #fff;
+    background: #2A2B2B;
     width: 80%;
     height: 80%;
     border-radius: 10px;
@@ -140,6 +140,7 @@ header .calendar-navigation span:hover {
 header .calendar-current-date {
     font-weight: 500;
     font-size: 1.45rem;
+    color: #6BE6C8;
 }
 
 .calendar-body {
@@ -160,7 +161,7 @@ header .calendar-current-date {
 .calendar-body li {
     width: calc(100% / 7);
     font-size: 1.07rem;
-    color: #414141;
+    color: #bbefe3;
 }
 
 .calendar-body .calendar-weekdays li {
@@ -176,11 +177,11 @@ header .calendar-current-date {
 }
 
 .calendar-dates li.inactive {
-    color: #aaa;
+    color: #606060;
 }
 
 .calendar-dates li.active {
-    color: #fff;
+    color: #2A2B2B;
 }
 
 .calendar-dates li::before {
@@ -201,55 +202,5 @@ header .calendar-current-date {
 
 .calendar-dates li:not(.active):hover::before {
     background: #6BE6C8;
-}
-
-
-
-/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
-
-.js-open-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 150px;
-    height: 50px;
-    margin: 10px auto;
-
-    border-radius: 10px;
-    background-color: #6BE6C8;
-    color: #2A2B2B;
-    letter-spacing: 0.15px;
-    font-size: 20px;
-    font-weight: 500;
-
-    transition: opacity 0.2s ease-in;
-
-
-}
-
-
-.modal__title{
-    padding-top: 20px;
-    color:#2A2B2B;
-    font-weight: 600;
-    font-size: 30px;
-    text-align: center;
-}
-
-.modal__title_1{
-    padding-top: 20px;
-    color:#2A2B2B;
-
-    font-size: 20px;
-    text-align: center;
-}
-
-.text-content{
-    text-align: center;
-    font-weight: 600;
-    font-size: 40px;
-    margin-bottom: 60px;
-    padding-top: 60px;
 }
 
