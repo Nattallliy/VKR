@@ -347,8 +347,14 @@ header .calendar-current-date {
     height: 100px;
     background-color: aquamarine;
     border-radius: 20%;
+}
 
-
+.button_text1{
+    margin: 50px auto;
+    color: #2A2B2B;
+    font-weight: 700;
+    font-size: 40px;
+    align-items: center;
 }
 
 
