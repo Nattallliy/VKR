@@ -78,7 +78,7 @@
         <a href="{% url 'week_filter' pk=5 %}"><button class="button" onclick='myFunction()'>ПТ</button></a>
         <a href="{% url 'week_filter' pk=6 %}"><button class="button" onclick='myFunction()'>СБ</button></a>
         <div class="button_text">
-            <p class="button_text11">↑  ↑  ↑  ↑  ↑  ↑</p>
+            <p class="button_text1">↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑</p>
             <p class="button_text1">Для того чтобы узнать расписание на интересующий вас день, пожалуйста, нажмите на кнопку.</p>
         </div>
     </div>
@@ -285,7 +285,6 @@ function myFunction() {
 
       '{% if week %}\n' +
       '        {% for i in week %}\n' +
-
       '            {{ i.time }}\n' +
       '            {{ i.train }}\n' +
       '            {{ i.title }}\n' +
