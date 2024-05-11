@@ -162,3 +162,19 @@ ul.nav_list li {
 .containerOnas_blok{
     background-color: #bbefe3;
 }
+
+
+@media (max-width: 768px) {
+   /* показываем кнопку для переключения верхней навигации */
+   .contact_text {
+    margin: 730px -550px;
+    }
+}
+
+
+@media (max-width: 468px) {
+   /* показываем кнопку для переключения верхней навигации */
+   .contact_text {
+    margin: 730px -550px;
+    }
+}
