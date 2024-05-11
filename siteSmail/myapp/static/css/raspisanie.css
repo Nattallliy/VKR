@@ -349,13 +349,18 @@ header .calendar-current-date {
     border-radius: 20%;
 }
 
-.button_text1{
-    margin: 50px auto;
+.button_text{
+    margin: 0px 300px;
     color: #2A2B2B;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     align-items: center;
+    text-align: center;
 }
+
+
+
+
 
 
 

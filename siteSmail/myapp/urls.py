@@ -15,6 +15,7 @@ urlpatterns = [
     path('prices/', views.prices, name='prices'),
     path('o_nas/', views.o_nas, name='o_nas'),
     path('kontact/', views.kontact, name='kontact'),
+   # path("review/<int:pk>/", views.AddReview.as_view(), name="add_review"),
 
 
 
