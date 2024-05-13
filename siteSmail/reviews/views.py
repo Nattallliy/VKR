@@ -17,8 +17,7 @@ class AddReview(View):
     def post(self, request):
         form = ReviewForm(request.POST)
 
-
         if form.is_valid():
          #   form = form.save(commit=False)
            form.save()
-        return render(request, 'myapp/index.html')
+        return render(request, 'reviews/reviews.html')
