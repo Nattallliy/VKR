@@ -6,7 +6,6 @@ from django.views import View
 
 
 def index(request):
-
     return render(request, 'myapp/index.html', {'title': 'Главная страница'})
 
 
