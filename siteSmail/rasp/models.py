@@ -11,6 +11,15 @@ class Peoples(models.Model):
     def __str__(self):
         return self.FIO
 
+class Month(models.Model):
+    month = models.CharField(max_length=128)
+
+    class Meta:
+        verbose_name = 'Месяц'
+        verbose_name_plural = 'Месяцы'
+
+    def __str__(self):
+        return self.month
 
 class Class(models.Model):
     train = models.CharField(max_length=128)
@@ -36,6 +45,7 @@ class Time(models.Model):
 
 
 class Week(models.Model):
+    month = models.ForeignKey('Month', on_delete=models.CASCADE, null=True)
     week = models.CharField(max_length=128,  null=True)
     time = models.ForeignKey('Time', on_delete=models.CASCADE, null=True)
     train = models.ForeignKey('Class', on_delete=models.CASCADE, null=True)
@@ -52,7 +62,7 @@ class Week(models.Model):
 
 
     def __str__(self):
-        return f'{self.week} {self.time}'
+        return f'{self.month} {self.week} {self.time}'
 
 
 
