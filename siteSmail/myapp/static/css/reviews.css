@@ -7,9 +7,10 @@
 }
 
 .single-form-left{
-    margin: 30px 50px;
+    margin: 100px 50px;
     padding: 30px 100px;
     color: #6BE6C8;
+    margin-left: 100px;
 
 }
 
@@ -28,20 +29,20 @@
 
 .border {
     background-color: #606060;
-    width: 200px;
+    width: 450px;
     height: 30px;
     margin: 10px;
-    border-radius: 10%;
+    border-radius: 10px;
 
 }
 
 .single-form-left{
     content: "";
-    width: 700px;
-    height: 600px;
+    width: 600px;
+    height: 500px;
     display: inline-block;
     background-color: #2A2B2B;
-    border-radius: 5%;
+    border-radius: 10px;
     margin-left: 30px;
 
 }
@@ -72,7 +73,7 @@
     width: 400px;
     height: 200px;
     background-color: #606060;
-    border-radius: 10%;
+    border-radius: 20px;
 }
 
 .reviews_img{
