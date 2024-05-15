@@ -7,16 +7,16 @@ html {
 
 .topNubex {
     content: "";
-	  position: fixed;
-	  right: 45px;
-	  bottom: 45px;
-    transform: rotate(-90deg);
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    color: #2A2B2B;
     display: block;
-    border-radius: 50%;
+    border-radius: 5px;
     background-color: #bbefe3;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    width: 50px;
+    width: 120px;
     height: 50px;
 }
 
@@ -1191,7 +1191,7 @@ ul.nav_list li {
 
 .nav-toggle {
     /* абсолютно позиционируем */
-    position: absolute;
+    margin-left: 200px;
     /* относительно левого края панели */
     left: 320px;
     /* отступ от верхнего края панели */
@@ -1546,6 +1546,8 @@ body {
     transition: opacity .5s, visibility .5s;
 }
 */
+
+
 
 
 

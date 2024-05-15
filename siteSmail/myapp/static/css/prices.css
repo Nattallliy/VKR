@@ -5,20 +5,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.topNubex {
-    content: "";
-	  position: fixed;
-	  right: 45px;
-	  bottom: 45px;
-    transform: rotate(-90deg);
-    display: block;
-    border-radius: 50%;
-    background-color: #bbefe3;
-    font-size: 40px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-}
+
 body {
     color: black;
     font-family: 'Poppins', sans-serif;
@@ -745,7 +732,7 @@ ul.nav_list li {
 
 .nav-toggle {
     /* абсолютно позиционируем */
-    position: absolute;
+    margin-left: 200px;
     /* относительно левого края панели */
     left: 320px;
     /* отступ от верхнего края панели */

@@ -52,7 +52,26 @@
         {% endfor %}
     </div>-->
 
-  <div class="calendar-container">
+
+    <div class="button_container">
+        <div class="button_text">
+            <p class="button_text1">Для того чтобы узнать расписание на интересующий вас день, пожалуйста, нажмите на кнопку.</p>
+            <p class="button_text1"> <img class="text-blok4" src="{% static 'images/classesimg/с_з.png'%}">
+            <img class="text-blok4" src="{% static 'images/classesimg/с_ч.png'%}">
+            <img class="text-blok4" src="{% static 'images/classesimg/с_з.png'%}">
+            <img class="text-blok4" src="{% static 'images/classesimg/с_ч.png'%}">
+            <img class="text-blok4" src="{% static 'images/classesimg/с_з.png'%}"></p>
+        </div>
+        <a href="{% url 'week_filter' pk=7 %}"><button class="button" onclick='myFunction()'>ВСК</button></a>
+        <a href="{% url 'week_filter' pk=1 %}"><button class="button" onclick='myFunction()'>ПН</button></a>
+        <a href="{% url 'week_filter' pk=2 %}"><button class="button" onclick='myFunction()'>ВТ</button></a>
+        <a href="{% url 'week_filter' pk=3 %}"><button class="button" onclick='myFunction()'>СР</button></a>
+        <a href="{% url 'week_filter' pk=4 %}"><button class="button" onclick='myFunction()'>ЧТ</button></a>
+        <a href="{% url 'week_filter' pk=5 %}"><button class="button" onclick='myFunction()'>ПТ</button></a>
+        <a href="{% url 'week_filter' pk=6 %}"><button class="button" onclick='myFunction()'>СБ</button></a>
+    </div>
+
+     <div class="calendar-container">
         <header class="calendar-header">
             <p class="calendar-current-date"></p>
             <div class="calendar-navigation">
@@ -78,19 +97,6 @@
                 <li>СБ</li>
             </ul>
             <ul class="calendar-dates"></ul>
-        </div>
-    </div>
-    <div class="button_container">
-        <a href="{% url 'week_filter' pk=7 %}"><button class="button" onclick='myFunction()'>ВСК</button></a>
-        <a href="{% url 'week_filter' pk=1 %}"><button class="button" onclick='myFunction()'>ПН</button></a>
-        <a href="{% url 'week_filter' pk=2 %}"><button class="button" onclick='myFunction()'>ВТ</button></a>
-        <a href="{% url 'week_filter' pk=3 %}"><button class="button" onclick='myFunction()'>СР</button></a>
-        <a href="{% url 'week_filter' pk=4 %}"><button class="button" onclick='myFunction()'>ЧТ</button></a>
-        <a href="{% url 'week_filter' pk=5 %}"><button class="button" onclick='myFunction()'>ПТ</button></a>
-        <a href="{% url 'week_filter' pk=6 %}"><button class="button" onclick='myFunction()'>СБ</button></a>
-        <div class="button_text">
-            <p class="button_text1">↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑</p>
-            <p class="button_text1">Для того чтобы узнать расписание на интересующий вас день, пожалуйста, нажмите на кнопку.</p>
         </div>
     </div>
 
@@ -325,18 +331,18 @@ const prenexIcons = document
 
 // Array of month names
 const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабоь"
 ];
 
 // Function to generate the calendar
