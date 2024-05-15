@@ -352,7 +352,7 @@ header .calendar-current-date {
 }
 
 .button_text{
-    margin: 0px 300px;
+    margin: auto;
     color: #2A2B2B;
     font-weight: 700;
     font-size: 30px;
@@ -360,8 +360,9 @@ header .calendar-current-date {
     text-align: center;
 }
 
-.button_text1{
+.button_text1_1{
     margin-top: 20px;
+    font-size: 10px;
 }
 
 /**
@@ -755,4 +756,8 @@ body {
 }
 */
 
-
+@media(max-width:1280px) {
+    .button_text1{
+        font-size: 20px;
+    }
+}

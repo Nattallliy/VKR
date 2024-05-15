@@ -1,11 +1,6 @@
 @import "./reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-.row{
-    display: flex;
-
-}
-
 
 .single-form-left{
     margin: 100px 50px;
@@ -78,7 +73,8 @@
 }
 
 .reviews_img{
-    margin-top: 30px;
+    margin-top: -700px;
+    margin-left: 800px;
 }
 
 
@@ -87,9 +83,13 @@
 
 .mt-4{
 
-
     margin: 30px 0px;
 
+}
+
+.mt-4_1{
+
+    margin: 30px 60px;
 
 }
 
@@ -427,14 +427,15 @@
     }
 }
 
-@media(max-width:1044px) {
+@media(max-width:1090px) {
     .reviews_img{
         margin-left: 100px ;
-        margin-top: 750px;
+        margin-top: 0px;
+
     }
 }
 
-@media(max-width:375px) {}
+
 
 @media(max-width:320px) {}
 
