@@ -62,13 +62,205 @@
             <img class="text-blok4" src="{% static 'images/classesimg/с_ч.png'%}">
             <img class="text-blok4" src="{% static 'images/classesimg/с_з.png'%}"></p>
         </div>
-        <a href="{% url 'week_filter' pk=7 %}"><button class="button" onclick='myFunction()'>ВСК</button></a>
+        <a href="{% url 'week_filter' pk=7 %}"><button class="js-open-modal" data-modal="1">ВСК</button></a>
+
+    <!-- Несколько модальных окон-->
+
+    <div class="modal" data-modal="1">
+
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+
+    <a href="{% url 'week_filter' pk=1 %}"><button class="js-open-modal" data-modal="2">ПН</button></a>
+
+    <!- Несколько модальных окон -->
+
+    <div class="modal" data-modal="2">
+        <!-   Svg иконка для закрытия окна  -->
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+<li> <p1 class="p1">{{ i.week }}</p1></li>
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+
+    <a href="{% url 'week_filter' pk=2 %}"><button class="js-open-modal" data-modal="3">ВТ</button></a>
+
+
+
+    <div class="modal" data-modal="3">
+
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+<li> <p1 class="p1">{{ i.week }}</p1></li>
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+
+
+    <a href="{% url 'week_filter' pk=3 %}"><button class="js-open-modal" data-modal="4">СР</button></a>
+
+
+
+    <div class="modal" data-modal="4">
+
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+<li> <p1 class="p1">{{ i.week }}</p1></li>
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+    <a href="{% url 'week_filter' pk=4 %}"><button class="js-open-modal" data-modal="5">ЧТ</button></a>
+
+
+
+
+
+    <div class="modal" data-modal="5">
+
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+<li> <p1 class="p1">{{ i.week }}</p1></li>
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+
+    <a href="{% url 'week_filter' pk=5 %}"><button class="js-open-modal" data-modal="6">ПТ</button></a>
+
+
+
+    <div class="modal" data-modal="6">
+
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+<li> <p1 class="p1">{{ i.week }}</p1></li>
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+
+    <a href="{% url 'week_filter' pk=6 %}"><button class="js-open-modal" data-modal="7">СБ</button></a>
+
+
+
+
+
+    <div class="modal" data-modal="7">
+
+        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <p class="modal__title">
+            {% for i in week %}
+                <div class="c">  </div>
+                <ul class="week">
+                    <li> <p1 class="p1">{{ i.week }}</p1></li>
+                    <li> <p1 class="p1">{{ i.time }}</p1></li>
+                    <li> <p2 class="p1">{{ i.train }}</p2></li>
+                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
+                    <br>
+                </ul>
+            {% endfor %}
+
+        </p>
+    </div>
+
+
+    <div class="overlay js-overlay-modal"></div>
+
+       <!-- <a href="{% url 'week_filter' pk=7 %}"><button class="button" onclick='myFunction()'>ВСК</button></a>
         <a href="{% url 'week_filter' pk=1 %}"><button class="button" onclick='myFunction()'>ПН</button></a>
         <a href="{% url 'week_filter' pk=2 %}"><button class="button" onclick='myFunction()'>ВТ</button></a>
         <a href="{% url 'week_filter' pk=3 %}"><button class="button" onclick='myFunction()'>СР</button></a>
         <a href="{% url 'week_filter' pk=4 %}"><button class="button" onclick='myFunction()'>ЧТ</button></a>
         <a href="{% url 'week_filter' pk=5 %}"><button class="button" onclick='myFunction()'>ПТ</button></a>
-        <a href="{% url 'week_filter' pk=6 %}"><button class="button" onclick='myFunction()'>СБ</button></a>
+        <a href="{% url 'week_filter' pk=6 %}"><button class="button" onclick='myFunction()'>СБ</button></a>-->
     </div>
 
      <div class="calendar-container">
@@ -101,198 +293,7 @@
     </div>
 
 
-<!--
-    <a href="{% url 'week_filter' pk=7 %}"><button class="js-open-modal" data-modal="1">ВСК</button></a>
 
-     Несколько модальных окон
-
-    <div class="modal" data-modal="1">
-           Svg иконка для закрытия окна
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-                    <li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    Подложка под модальным окном
-    <div class="overlay js-overlay-modal"></div>
-
-
-    <a href="{% url 'week_filter' pk=1 %}"><button class="js-open-modal" data-modal="2">ПН</button></a>
-
-    <!- Несколько модальных окон --
-
-    <div class="modal" data-modal="2">
-        <!-   Svg иконка для закрытия окна  --
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-<li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    <!- Подложка под модальным окном --
-    <div class="overlay js-overlay-modal"></div>
-
-
-    <a href="{% url 'week_filter' pk=2 %}"><button class="js-open-modal" data-modal="3">ВТ</button></a>
-
-    <!- Несколько модальных окон --
-
-    <div class="modal" data-modal="3">
-        <!-   Svg иконка для закрытия окна  --
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-<li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    <!- Подложка под модальным окном --
-    <div class="overlay js-overlay-modal"></div>
-
-
-
-    <a href="{% url 'week_filter' pk=3 %}"><button class="js-open-modal" data-modal="4">СР</button></a>
-
-    <!-Несколько модальных окон --
-
-    <div class="modal" data-modal="4">
-        <!-   Svg иконка для закрытия окна  --
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-<li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    <!- Подложка под модальным окном --
-    <div class="overlay js-overlay-modal"></div>
-
-    <a href="{% url 'week_filter' pk=4 %}"><button class="js-open-modal" data-modal="5">ЧТ</button></a>
-
-
-
-    <!- Несколько модальных окон --
-
-    <div class="modal" data-modal="5">
-        <!-   Svg иконка для закрытия окна  --
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-<li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    <!- Подложка под модальным окном --
-    <div class="overlay js-overlay-modal"></div>
-
-
-    <a href="{% url 'week_filter' pk=5 %}"><button class="js-open-modal" data-modal="6">ПТ</button></a>
-
-    <-- Несколько модальных окон --
-
-    <div class="modal" data-modal="6">
-        <--   Svg иконка для закрытия окна  --
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-<li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    !-- Подложка под модальным окном --
-    <div class="overlay js-overlay-modal"></div>
-
-
-    <a href="{% url 'week_filter' pk=6 %}"><button class="js-open-modal" data-modal="7">СБ</button></a>
-
-
-
-    <!- Несколько модальных окон --
-
-    <div class="modal" data-modal="7">
-        <!-   Svg иконка для закрытия окна  --
-        <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-        <p class="modal__title">
-            {% for i in week %}
-                <div class="c">  </div>
-                <ul class="week">
-                    <li> <p1 class="p1">{{ i.week }}</p1></li>
-                    <li> <p1 class="p1">{{ i.time }}</p1></li>
-                    <li> <p2 class="p1">{{ i.train }}</p2></li>
-                    <li> <p4 class="p1">{{ i.FIO }}</p4></li>
-                    <br>
-                </ul>
-            {% endfor %}
-
-        </p>
-    </div>
-
-    <-- Подложка под модальным окном --
-    <div class="overlay js-overlay-modal"></div>-->
 
 
 <script>
@@ -435,7 +436,7 @@ prenexIcons.forEach(icon => {
 </script>
 
 
-<!--<script>
+<script>
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
 
 
@@ -506,7 +507,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 }); // end ready
-</script>-->
+</script>
 
 </body>
 </html>

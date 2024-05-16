@@ -5,20 +5,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.topNubex {
-    content: "";
-    position: fixed;
-    right: 45px;
-    bottom: 45px;
-    color: #2A2B2B;
-    display: block;
-    border-radius: 5px;
-    background-color: #bbefe3;
-    font-size: 30px;
-    text-align: center;
-    width: 120px;
-    height: 50px;
-}
 body {
     color: black;
     font-family: 'Poppins', sans-serif;
@@ -298,7 +284,7 @@ top: 50%;
 width: auto;
 padding: 16px;
 margin-top: -22px;
-color: #c0ff00;
+color: white;
 font-weight: bold;
 font-size: 18px;
 transition: 0.6s ease;
@@ -339,7 +325,7 @@ transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-background-color: #ffffff;
+background-color: #6BE6C8;
 }
 
 /* Fading animation */
@@ -404,7 +390,7 @@ to {opacity: 1}
 
 .nav-toggle {
     /* абсолютно позиционируем */
-    margin-left: 200px;
+    position: absolute;
     /* относительно левого края панели */
     left: 320px;
     /* отступ от верхнего края панели */
@@ -759,34 +745,3 @@ body {
     transition: opacity .5s, visibility .5s;
 }
 */
-
-@media screen and (min-width: 414px){
-    .text-content{
-        font-size: 30px;
-    }
-
-    .whatwe_content_text_z{
-        font-size: 25px;
-    }
-    .whatwe_content_text_c{
-        font-size: 15px;
-    }
-    .whatwe_content_foto{
-        margin-top: 100px;
-        width: 800px;
-        height: 400px;
-    }
-
-
-
-    .containerOnas_studio_blok_text{
-        width: 700px;
-        transform: translate(-200px, 300px) ;
-        margin-bottom: 300px;
-        margin-top: 40px;
-    }
-    .containerOnas_studio_blok_karusel{
-        transform: translateX(150px);
-
-    }
-}

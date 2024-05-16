@@ -7,7 +7,7 @@ class ReviewForm(forms.ModelForm):
     """Форма отзывов"""
     class Meta:
         model = Reviews
-        fields = ("name", "email", "text")
+        fields = ("name", "text")
 
 class ApplicationForm(forms.ModelForm):
     """Форма отзывов"""

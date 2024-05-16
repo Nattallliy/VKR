@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Peoples(models.Model):
-    FIO = models.CharField(max_length=128)
+    FIO = models.CharField("ФИО", max_length=128)
 
     class Meta:
         verbose_name = 'Тренер'
@@ -12,7 +12,7 @@ class Peoples(models.Model):
         return self.FIO
 
 class Month(models.Model):
-    month = models.CharField(max_length=128)
+    month = models.CharField("Месяц", max_length=128)
 
     class Meta:
         verbose_name = 'Месяц'
@@ -22,7 +22,7 @@ class Month(models.Model):
         return self.month
 
 class Class(models.Model):
-    train = models.CharField(max_length=128)
+    train = models.CharField("Тренировка", max_length=128)
 
     class Meta:
         verbose_name = 'Занятие'
@@ -33,7 +33,7 @@ class Class(models.Model):
 
 
 class Time(models.Model):
-    time = models.CharField(max_length=128)
+    time = models.CharField("Время", max_length=128)
 
 
     class Meta:
@@ -46,10 +46,10 @@ class Time(models.Model):
 
 class Week(models.Model):
     month = models.ForeignKey('Month', on_delete=models.CASCADE, null=True)
-    week = models.CharField(max_length=128,  null=True)
+    week = models.CharField("День недели", max_length=128,  null=True)
     time = models.ForeignKey('Time', on_delete=models.CASCADE, null=True)
     train = models.ForeignKey('Class', on_delete=models.CASCADE, null=True)
-    title = models.CharField(max_length=128, null=True)
+    title = models.CharField("Доп. запись", max_length=128, null=True)
     FIO = models.ForeignKey('Peoples', on_delete=models.CASCADE, null=True)
     date = models.DateField('дата')
 
@@ -57,8 +57,8 @@ class Week(models.Model):
 
 
     class Meta:
-        verbose_name = 'День недели'
-        verbose_name_plural = 'Дни недели'
+        verbose_name = 'Расписание занятий'
+        verbose_name_plural = 'Расписание занятий'
 
 
     def __str__(self):

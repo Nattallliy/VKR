@@ -209,12 +209,12 @@ header .calendar-current-date {
 
 .button_container{
 
-    margin: 0px 170px;
+    margin: 0px 230px;
 
 }
 .button{
     align-items: center;
-    margin: 50px 56px;
+
     display: inline-block;
     width: 45px;
     height: 45px;
@@ -303,7 +303,7 @@ header .calendar-current-date {
 
 .js-open-modal {
     align-items: center;
-    margin: 50px 56px;
+    margin: 50px 60px;
     display: inline-block;
     width: 45px;
     height: 45px;
