@@ -4,6 +4,20 @@
 html {
     scroll-behavior: smooth;
 }
+.topNubex {
+    content: "";
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    color: #2A2B2B;
+    display: block;
+    border-radius: 5px;
+    background-color: #bbefe3;
+    font-size: 30px;
+    text-align: center;
+    width: 120px;
+    height: 50px;
+}
 
 body {
     color: black;

@@ -53,13 +53,9 @@ class Week(models.Model):
     FIO = models.ForeignKey('Peoples', on_delete=models.CASCADE, null=True)
     date = models.DateField('дата')
 
-
-
-
     class Meta:
         verbose_name = 'Расписание занятий'
         verbose_name_plural = 'Расписание занятий'
-
 
     def __str__(self):
         return f'{self.month} {self.week} {self.time}'
