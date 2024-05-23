@@ -1,0 +1,12 @@
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: 3.10
+build:
+  requirementsPath: requirements.txt
+run:
+  scriptName: main.py
+  persistenceMount: /data
+  containerPort: 8000
+  command: gunicorn siteSmail.wsgi:application  --env DJANGO_SETTING_MODULE=siteSmail.settings --bind 0.0.0.0:80
